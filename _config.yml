@@ -18,9 +18,9 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-csv
 # SITE SETTINGS
 #
 # title of site appears in banner
-title: CollectionBuilder CSV
+title: CB Essay
 # tagline, a short phrase that will appear throughout the site in the top banner
-tagline: Digital Collection Magic with Static Web Technologies
+tagline: A Content First Digital Exhibit Template
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
 description: "CollectionBuilder-CSV is a template for creating digital collection exhibits using static web technology."
@@ -34,7 +34,7 @@ author: CollectionBuilder
 #
 # Set the metadata for your collection (the name of the CSV file in your _data directory that describes the objects in your collection) 
 # Use the filename of your CSV **without** the ".csv" extension! E.g. _data/demo-metadata.csv --> "demo-metadata"
-metadata: demo-compoundobjects-metadata 
+metadata: demo-metadata 
 # page generation settings [optional!]
 # [optional: only used if you need to tweak CB defaults or generate from more than one data file]
 # page_gen:
@@ -44,6 +44,22 @@ metadata: demo-compoundobjects-metadata
 #     dir: 'items'
 #     extension: 'html' 
 #     filter: 'objectid'  
+
+# Essay collection settings
+collections:
+  essay:
+    sort_by: order
+    output: true
+
+defaults:
+  - 
+    scope: 
+      path: "" 
+      type: "essay"
+    values:
+      layout: "essay"
+      permalink: /essay/:slug:output_ext
+
 
 ##########
 # Site/Organization Branding 
@@ -61,7 +77,6 @@ organization-logo-nav: https://cdil.lib.uidaho.edu/assets/img/logo.png
 # leave these blank or comment out to NOT include google code
 # if present, used to add analytics during "production" build only
 # google-analytics-id: "G-XXXXXXXXX"
-# google-cse-id: "002151703305773322890:1pu3smhw1t8"
 
 ##########
 # ROBOTS EXCLUDE
